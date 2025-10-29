@@ -1,0 +1,82 @@
+# ESP32-C3 iBeacon Gateway - GitHub Repository .gitignore
+
+# Binaries and executables
+*.bin
+*.elf
+*.map
+*.hex
+*.dfu
+
+# Build directories
+.pio/
+build/
+dist/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and debugging
+*.log
+core.*
+debug.txt
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# Project-specific exclusions
+src/
+lib/
+test/
+include/
+platformio.ini
+data/
+
+# Documentation build artifacts
+docs/_build/
+*.pdf
+*.epub
+
+# Package files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Node modules (if using web tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python bytecode
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Local environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
