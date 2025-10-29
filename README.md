@@ -2,7 +2,7 @@
 
 A professional ESP32-C3 based iBeacon gateway system designed specifically for restaurant environments. This device creates a Bluetooth Low Energy (BLE) beacon that customers can use to connect to restaurant services with their smartphones.
 
-## 🌟 Features
+##  Features
 
 - **Restaurant-Ready**: Pre-configured for "Carenuity Restaurant" branding
 - **Optimized Range**: 2-meter transmission range for table-specific service
@@ -11,7 +11,7 @@ A professional ESP32-C3 based iBeacon gateway system designed specifically for r
 - **Visual Feedback**: RGB NeoPixel LED status indicators
 - **Plug & Play**: Ready-to-use merged binary files
 
-## ⚡ Quick Installation
+## Quick Installation
 
 **Instant Setup**: Use our web-based solution builder at **[https://solutions.carenuity.com/](https://solutions.carenuity.com/)** for one-click installation and configuration!
 
@@ -68,7 +68,7 @@ A professional ESP32-C3 based iBeacon gateway system designed specifically for r
 - **Sleep Mode**: Automatic power optimization
 - **Battery Life**: Extended operation with efficient BLE advertising
 
-## 🎨 LED Status Indicators
+## LED Status Indicators
 
 | Color | Status |
 |-------|--------|
@@ -151,22 +151,22 @@ table=15&server=https://yourrestaurant.com/order
 - Basic BLE advertising and WiFi setup
 - Standard LED indicators
 
-## 🛠️ Advanced Configuration
+##  Advanced Configuration
 
 The device automatically configures itself for restaurant use. For advanced settings, connect to the serial console at 115200 baud to monitor system status.
 
-## 📞 Support
+## Support
 
 For technical support or custom configurations:
 - Create an issue in this repository
 - Provide serial console output for debugging
 - Include device model and version information
 
-## 📄 License
+## License
 
 This project is distributed as binary-only releases. Source code is proprietary.
 
-## 🏢 About Carenuity
+## About Carenuity
 
 Professional IoT solutions for the hospitality industry. Visit [https://solutions.carenuity.com/](https://solutions.carenuity.com/) for more restaurant technology solutions.
 
