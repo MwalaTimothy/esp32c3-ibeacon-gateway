@@ -20,9 +20,10 @@ A professional ESP32-C3 based iBeacon gateway system designed specifically for r
 ### Hardware Required
 
 - ESP32-C3 Lolin Mini development board
-- <img width="501" height="321" alt="image" src="https://github.com/user-attachments/assets/6ff7fe2d-4df6-40b3-baa5-2b60f30fbbbf" />
+ <img width="501" height="321" alt="image" src="https://github.com/user-attachments/assets/6ff7fe2d-4df6-40b3-baa5-2b60f30fbbbf" />
 
-- Built-in NeoPixel RGB LED (GPIO 7)
+-[Buy it]([https://github.com/MwalaTimothy/esp32c3-ibeacon-gateway/releases](https://www.chipglobe.shop/en/p/carenuity-original-c3-mini-v2-2-1-esp32-c3-iot-development-board )
+- Built-in NeoPixel RGB LED 
 - USB-C cable for flashing
 
 ### Installation Steps
