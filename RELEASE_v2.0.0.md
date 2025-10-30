@@ -1,6 +1,6 @@
 # Release v2.0.0 - Enhanced Restaurant Branding & Battery Optimization
 
-## 🌟 What's New in v2.0.0
+## What's New in v2.0.0
 
 ### Major Enhancements
 - **🏪 Complete Restaurant Branding**: Device now advertises as "Carenuity Restaurant" for professional customer experience
@@ -27,7 +27,7 @@
 - **Power**: -12dBm transmission power
 - **Advertising**: 160-320ms intervals
 
-## 🎨 LED Status Indicators
+## LED Status Indicators
 
 | Color | Status |
 |-------|--------|
@@ -45,7 +45,7 @@
 - **Power**: USB-C 5V or 3.3V battery
 - **Form Factor**: Lolin C3 Mini compatible
 
-## 🚀 Installation
+## Installation
 
 1. Download `carenuity-restaurant-ibeacon-v2.0.0.bin`
 2. Flash using esptool: `esptool.py --chip esp32c3 --port COM_PORT write_flash 0x0 carenuity-restaurant-ibeacon-v2.0.0.bin`
