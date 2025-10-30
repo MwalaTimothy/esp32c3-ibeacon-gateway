@@ -23,7 +23,7 @@
 - ESP32-C3 hardware abstraction
 - Fundamental BLE stack implementation
 
-## 📋 Technical Specifications
+## Technical Specifications
 
 - **MCU**: ESP32-C3 (160MHz RISC-V)
 - **Memory**: 320KB RAM, 4MB Flash
@@ -31,7 +31,7 @@
 - **Power**: USB-C 5V input
 - **Form Factor**: Lolin C3 Mini
 
-## 🚀 Installation
+## Installation
 
 1. Download `carenuity-restaurant-ibeacon-v1.0.0.bin`
 2. Flash using esptool: `esptool.py --chip esp32c3 --port COM_PORT write_flash 0x0 carenuity-restaurant-ibeacon-v1.0.0.bin`
