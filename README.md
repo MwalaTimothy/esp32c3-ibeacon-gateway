@@ -1,10 +1,10 @@
-# ESP32-C3 iBeacon Gateway - Carenuity Restaurant
+# ESP32-C3 iBeacon Gateway 
 
 A professional ESP32-C3 based iBeacon gateway system designed specifically for restaurant environments. This device creates a Bluetooth Low Energy (BLE) beacon that customers can use to connect their smartphones to restaurant services.
 
 ##  Features
 
-- **Restaurant-Ready**: Pre-configured for "Carenuity Restaurant" branding
+- **Restaurant-Ready**: Pre-configured for "Smart Restaurant" branding
 - **Optimized Range**: 2-meter transmission range for table-specific service
 - **Battery Efficient**: 5-second LED indicators to maximize battery life
 - **Easy WiFi Setup**: ImprovWiFi for smartphone-based configuration
