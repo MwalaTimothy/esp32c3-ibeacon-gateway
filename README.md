@@ -1,10 +1,17 @@
 # ESP32-C3 BLE Gateway Firmware v2.1
 
-**Production-Ready iBeacon Detection & KDS Integration**
+# IBeacon Gateway
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Hardware](https://img.shields.io/badge/hardware-ESP32C3-orange.svg)
+![Framework](https://img.shields.io/badge/framework-ESPIDF-brightgreen.svg)
+![License](https://img.shields.io/badge/license-MIT-yellow.svg)
+![Project Status](https://img.shields.io/badge/status-active-green.svg)
+<img width="756" height="538" alt="image" src="https://github.com/user-attachments/assets/025bf0ae-48f5-4e04-8a0f-01d3212ee27e" />
+
 
 **Version**: 2.1  
 **Target**: ESP32-C3 (LOLIN C3 Mini)  
-**Framework**: Arduino / NimBLE-Arduino 2.1.0  
 **Companion**: [BLE-iBeacon System](https://github.com/MwalaTimothy/BLE-iBeacon)  
 **Author**: MwalaTimothy | **Updated**: April 24, 2026
 
