@@ -6,6 +6,12 @@
 ║                                                                            ║
 ╚════════════════════════════════════════════════════════════════════════════╝
 
+DOCUMENTATION
+─────────────
+Use these two README versions depending on your need:
+ - README.md: Primary firmware documentation (v2.1)
+ - README_v2.md: Tratoria implementation notes and RGB ring behavior
+
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  SECTION 1: HARDWARE SETUP

@@ -1,5 +1,9 @@
 # ESP32-C3 BLE Gateway Firmware v2.1
 
+## Documentation Versions
+- [README.md](README.md): Primary firmware documentation (v2.1).
+- [README_v2.md](README_v2.md): Tratoria implementation notes for current `src/gateway_main.cpp` behavior, including RGB ring integration.
+
 # IBeacon Gateway
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
@@ -38,7 +42,7 @@ This **always-on Bluetooth Low Energy gateway** detects nearby iBeacon transmitt
 
 ### System Diagram
 
-```
+```raw
 ┌──────────────────────────────────────────────────────────────────┐
 │                    ESP32-C3 Gateway (Always-On)                  │
 │                                                                  │
@@ -59,7 +63,7 @@ This **always-on Bluetooth Low Energy gateway** detects nearby iBeacon transmitt
 
 ### Operational Flow
 
-```
+```raw
 1. INITIALIZATION (Setup Phase)
    ├─ Load configuration from NVS flash
    ├─ Initialize GPIO3 LED (low = off)
@@ -276,7 +280,7 @@ int trackedBeaconCount = 0;  // Current count
 
 ### Typical Configuration Session
 
-```
+```raw
 [Serial Monitor @ 115200]
 
 > CONFIG
@@ -447,7 +451,7 @@ esptool.py --chip esp32c3 --port COM3 --baud 460800 \
 5. Verify beacon is powered and advertising
 
 **Solution:**
-```
+```raw
 BLE DEBUG ON                    # See what's being received
 SET UUID <correct-uuid>         # If UUID mismatch
 SET MAJOR 65535                 # Track all majors temporarily
@@ -463,7 +467,7 @@ SAVE
 4. Network routing between gateway and KDS
 
 **Solution:**
-```
+```raw
 WIFI STATUS                     # Verify connected + get IP
 # From computer: ping 192.168.1.100 (KDS IP)
 # From computer: curl -X POST http://192.168.1.100:8080/beacons
@@ -479,7 +483,7 @@ WIFI STATUS                     # Verify connected + get IP
 4. SSID/password are correct
 
 **Solution:**
-```
+```raw
 WIFI STATUS              # Check RSSI (goal: -40 to -50 dBm)
 WIFI DISCONNECT
 WIFI CONNECT             # Manual reconnect
@@ -538,7 +542,7 @@ The gateway pairs with a **vibration-triggered beacon transmitter**:
 ### Configuration Example
 
 **Beacon Side (set once, survives power cycles):**
-```
+```raw
 SET UUID 8a46676d-6348-4d50-a0e6-af5a508def40
 SET MAJOR 1
 SET MINOR 5
@@ -546,7 +550,7 @@ SAVE
 ```
 
 **Gateway Side (must match UUID & Major):**
-```
+```raw
 SET UUID 8a46676d-6348-4d50-a0e6-af5a508def40
 SET MAJOR 1
 SAVE
@@ -561,7 +565,7 @@ SAVE
 ### Wildcard Major Tracking
 
 To track **all beacons regardless of Major**:
-```
+```raw
 SET MAJOR 65535
 SAVE
 ```
@@ -570,7 +574,7 @@ Now beacon Major values 0, 1, 2, ..., 65534 are all tracked.
 ### Increase Scan Duration
 
 For deeper BLE discovery in noisy environments:
-```
+```raw
 SET SCAN_MS 10000    # 10-second scan cycles
 SAVE
 ```
@@ -578,7 +582,7 @@ SAVE
 ### Reduce Report Frequency
 
 To lower KDS server load:
-```
+```raw
 SET REPORT_MS 30000  # Report every 30 seconds
 SAVE
 ```
@@ -586,7 +590,7 @@ SAVE
 ### Enable BLE Packet-Level Debug
 
 To inspect every iBeacon received:
-```
+```raw
 BLE DEBUG ON
 # Observe output:
 # [2026-04-25 10:30:15] [BLE-DBG] iBeacon mfg:004C major:1 minor:5 rssi:-62
