@@ -1,9 +1,30 @@
 # Changelog
 
-All notable changes to the Carenuity Restaurant iBeacon Gateway project will be documented in this file.
+All notable changes to the ESP32-C3 iBeacon Gateway firmware (including the Carenuity Restaurant-branded variant) will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [2.2.0] - 2026-07-11
+
+Production-readiness and reliability release for the RGB Ring Integration firmware line. No configuration commands, NVS-stored settings, RGB ring states, or backend JSON payload format changed in this release — existing deployed units and integrations are unaffected by the upgrade.
+
+### Reliability
+- WiFi connect/reconnect and time sync no longer block the gateway: BLE scanning, the RGB ring, and the serial console all stay responsive while a connection attempt is in progress, instead of freezing for several seconds per attempt.
+- Added automatic crash recovery: if the firmware ever detects it has stalled, it now reboots itself rather than requiring a manual power cycle.
+- Boot log now reports the reason for the previous reset (normal power-on, watchdog recovery, brownout, etc.), making field diagnostics much easier.
+- Backend reporting requests now time out instead of being able to stall the gateway indefinitely if the server is slow or unreachable.
+
+### Hardening
+- Serial-configured values (gateway ID, backend address, WiFi credentials) are now length-bounded and safely encoded before being sent to the backend, preventing malformed input from corrupting a report.
+- Removed a legacy internal file that had a placeholder network credential embedded in it; it was never used by the running firmware but had no reason to exist in a shipped release.
+
+### Build
+- The build pipeline this release is compiled from is now version-pinned for reproducibility, and passes a clean compile with all compiler warnings enabled.
+
+### Known limitations (unchanged from prior releases)
+- No over-the-air (OTA) update mechanism; firmware updates require physical USB access.
+- No TLS on backend reporting traffic (see README "Security Considerations").
 
 ## [2.0.0] - 2025-10-29
 
